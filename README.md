@@ -33,6 +33,7 @@ As a B&B Owner:
 ## Schedule
 Task | Estimate | Complete By
 --- | --- | ---
+Front-End
 Build Wireframes / Concept | 1 Day | Th July 23
 Build User DB | 2 Hours | Fri July 24
 Build Rooms DB | 2 Hours | Fri July 24
