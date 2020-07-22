@@ -1,22 +1,27 @@
 # Full CRUD Demo - Reservation App for Bed & Breakfast
 
 ## Technology Used
+  * React for user interface
+    * Axios
+  * MongoDB for data
+  * Node.js / Express for back-end framework
+  * Tailwind CSS for layout/design
 
 
 ## User Stories
-As a User:
-  * I want to learn more about the B&B's location
-  * I want to learn more about each room
-  * I want to be able to book a reservation for a room (if available)
-  * I want to be able to cancel my reservation
-  * I want to be able to view all my reservations
+As a User, I want to...
+  * ...learn more about the B&B's location
+  * ...learn more about each room, including more pictures, amenities, etc.
+  * ...be able to book a reservation for a room, by date(s)
+  * ...be able to cancel my reservation
+  * ...be able to view all my reservations
 
 As a B&B Owner:
-  * I want to be able to create/edit/delete Users
-  * I want to see all reservations
-  * I want to see all Users and their associated reservations
-  * I want to be able to book any reservation for any user
-  * I want to be able to cancel any reservation for any user
+  * ...be able to create/edit/delete Users
+  * ...see all reservations
+  * ...see all Users and their associated reservations
+  * ...be able to book any reservation for any user
+  * ...be able to cancel any reservation for any user
 
 
 ## Wireframes / Concepts
