@@ -1,1 +1,1 @@
-# capstone
+# Full CRUD Demo - Reservation App for Bed & Breakfast
