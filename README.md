@@ -4,6 +4,19 @@
 
 
 ## User Stories
+As a User:
+  * I want to learn more about the B&B's location
+  * I want to learn more about each room
+  * I want to be able to book a reservation for a room (if available)
+  * I want to be able to cancel my reservation
+  * I want to be able to view all my reservations
+
+As a B&B Owner:
+  * I want to be able to create/edit/delete Users
+  * I want to see all reservations
+  * I want to see all Users and their associated reservations
+  * I want to be able to book any reservation for any user
+  * I want to be able to cancel any reservation for any user
 
 
 ## Wireframes / Concepts
