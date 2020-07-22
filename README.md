@@ -3,6 +3,9 @@
 ## Technology Used
   * React for user interface
     * Axios
+    * React-Router-Auth
+    * React-Router-Dom
+    * Styled-Components
   * MongoDB for data
   * Node.js / Express for back-end framework
   * Tailwind CSS for layout/design
