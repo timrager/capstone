@@ -1,4 +1,4 @@
-# Full CRUD Demo - Reservation App for Bed & Breakfast
+# Reservation App for Bed & Breakfast (demo of full CRUD)
 
 ## Technology Used
   * React for user interface
