@@ -33,15 +33,19 @@ As a B&B Owner:
 ## Schedule
 Task | Estimate | Complete By
 --- | --- | ---
-**Planning**
+**Planning** | - | -
 Build Wireframes / Concept | 1 Day | Th July 23
 Build User Stores | 2 Hours | Th July 23
 Build Schedule | 2 Hours | Th July 23
-**Back-End**
+**Back-End** | - | - 
+Set up MongoDB with:
+Define and build API (Server, Controller, Model) | 2 Hours | Friday July 24
 Build User DB | 2 Hours | Fri July 24
 Build Rooms DB | 2 Hours | Fri July 24
-Build User Authentication Back-End | 1 Day | Sat July 25
-**Front-End**
+Build CRUD functionality for User | 2 Hours | Sat July 25 
+Build CRUD functionality for Reservations | 2 Hours | Sat July 25
+Build User Authentication Back-End | 4 Hours | Sat July 25
+**Front-End** | - | - 
 Build Login Page | 2 Hours | Sun July 26
 Build Sign-Up Page | 4 Hours | Sun July 26
 Build User Profile Page | 1 Day | Mon July 27
