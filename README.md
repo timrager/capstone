@@ -6,7 +6,7 @@
     * React-Router-Auth
     * React-Router-Dom
     * Styled-Components
-  * MongoDB for data
+  * MongoDB / Mongoose for data
   * Node.js / Express for back-end framework
   * Tailwind CSS for layout/design
 
@@ -39,7 +39,7 @@ Build User Stores | 2 Hours | Th July 23
 Build Schedule | 2 Hours | Th July 23
 **Back-End** | - | - 
 Set up MongoDB with:
-Define and build API (Server, Controller, Model) | 2 Hours | Friday July 24
+Define and build API (Server, Controller, Model) | 2 Hours | Fri July 24
 Build User DB | 2 Hours | Fri July 24
 Build Rooms DB | 2 Hours | Fri July 24
 Build CRUD functionality for User | 2 Hours | Sat July 25 
