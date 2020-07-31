@@ -6,7 +6,7 @@ class Landing extends Component {
         return(
         <div>
             <div>
-                <Link to="/register">Register</Link>
+                <Link to="/signup">Signup</Link>
             </div>
             <div>
                 <Link to="/login">Login</Link>
