@@ -41,8 +41,8 @@ db.on('open' , ()=>{});
 ////////////////
 // CONTROLLER //
 ////////////////
-const reservationController = require('./controllers/reservation.js');
-app.use('/', reservationController)
+const users = require('./routes/api/users');
+app.use('/api/users', users)
 
 //////////////////////
 // EXPRESS LISTENER //

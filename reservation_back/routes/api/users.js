@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const keys = require('../config/keys');
-const User = require('../models/User');
-const Room = require('../models/Room');
-const validateSignupInput = require('../validation/signup');
-const validateLoginInput = require('../validation/login');
+const keys = require('../../config/keys');
+const User = require('../../models/User');
+const Room = require('../../models/Room');
+const validateSignupInput = require('../../validation/signup');
+const validateLoginInput = require('../../validation/login');
 
 // Create (POST) -- creates a new user, hashing their password before saving to DB
 router.post('/signup', (req, res) => {
