@@ -1,14 +1,17 @@
 # Reservation App for Bed & Breakfast (demo of full CRUD)
 
 ## Technology Used
-  * React for user interface
-    * Axios
-    * React-Router-Auth
-    * React-Router-Dom
-    * Styled-Components
-  * MongoDB / Mongoose for data
-  * Node.js / Express for back-end framework
-  * Tailwind CSS for layout/design
+  * Front End
+    * React for user interface
+    * Redux for global state management
+    * Tailwind CSS for layout/design
+  * Back End
+    * Node.js / Express for route management, request/response handling
+    * MongoDB / Mongoose for handing data
+    * bcryptjs for storing hashed passwords
+    * passport/passport-jwt to handle authentication
+    * jsonwebtoken for authorization
+
 
 
 ## User Stories
@@ -28,6 +31,7 @@ As a B&B Owner:
 
 
 ## Wireframes / Concepts
+  * [Initial concepts](Concepts.pdf)
 
 
 ## Schedule
@@ -57,5 +61,9 @@ Testing | 1 Day | Sun Aug 2
 
 
 ## Future Update Roadmap
-
-
+  * Implement dashboard page to review user's info
+  * Implement admin page to manage users and reservations
+  * Prevent multiple bookings on a room
+  * Create more detailed room pages
+  * Allow for eCommerce-type checkout
+  * Add more form validation

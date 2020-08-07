@@ -10,8 +10,6 @@ import store from './store'
 import Front from './components/layout/MainContent'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
-import Navbar from './components/layout/Navbar';
-import Landing from './components/layout/Landing';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import PrivateRoute from './components/private-route/PrivateRoute';
@@ -37,7 +35,6 @@ class App extends Component{
         <Router>
           <div className="App">
           <Header />
-          {/* <Front /> */}
             <Switch>  
               <Route exact path="/" component={Front} />
               <Route exact path="/login" component={Login} />

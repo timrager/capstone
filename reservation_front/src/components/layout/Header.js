@@ -25,7 +25,7 @@ class Header extends Component{
                 </div>
                 
                 <div class="my-4">
-                    <h1 class="text-2xl text-indigo-100">Estate Bay Bed & Breakfast</h1>
+                    <h1 class="text-4xl text-indigo-100">Estate Bay Bed & Breakfast</h1>
                     <p class="text-sm text-indigo-200">Escape to a secluded paradise</p>
                     
                     <div class="relative mt-4 flex">
