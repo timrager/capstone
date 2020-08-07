@@ -7,6 +7,9 @@ import { setCurrentUser, logoutUser } from './components/actions/authActions'
 import { Provider } from 'react-redux';
 import store from './store'
 
+import Front from './components/layout/MainContent'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Signup from './components/auth/Signup';
@@ -23,7 +26,7 @@ if (localStorage.jwtToken) {
   const currentTime = Date.now() / 1000;
   if(decoded.exp < currentTime){
     store.dispatch(logoutUser());
-    window.location.href="./login";
+    window.location.href="./";
   }
 }
 
@@ -33,13 +36,15 @@ class App extends Component{
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Navbar/>
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/login" component={Login} />
-            <Switch>
+          <Header />
+          {/* <Front /> */}
+            <Switch>  
+              <Route exact path="/" component={Front} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
+            <Footer />
           </div>
         </Router>
       </Provider>

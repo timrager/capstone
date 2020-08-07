@@ -13,20 +13,20 @@ class Login extends Component{
         errors: {}
     };
 
-    componentDidMount(){
-        if(this.props.auth.isAuthenticated) {
-            this.props.history.push("/dashboard");
-        }
-    }
+    // componentDidMount(){
+    //     if(this.props.auth.isAuthenticated) {
+    //         this.props.history.push("/dashboard");
+    //     }
+    // }
 
-    componentWillReceiveProps(nextProps){
-        if(nextProps.auth.isAuthenticated){
-            this.props.history.push("/dashboard");
-        }
-        if(nextProps.errors){
-            this.setState({ errors: nextProps.errors })
-        }
-    }
+    // componentWillReceiveProps(nextProps){
+    //     if(nextProps.auth.isAuthenticated){
+    //         this.props.history.push("/dashboard");
+    //     }
+    //     if(nextProps.errors){
+    //         this.setState({ errors: nextProps.errors })
+    //     }
+    // }
 
     onChange = (event) => {
         this.setState({ [event.target.id]: event.target.value });
@@ -41,37 +41,37 @@ class Login extends Component{
         };
 
         console.log(userData);
-        this.props.loginUser(userData);
+        this.props.loginUser(userData, this.props.history);
     };
 
     render(){
         const { errors } = this.state;
 
         return(
-            <div className="container">
-                <div className="row">
-                    <Link to="/">Back to Home</Link>
-                    <h4>Login Below</h4>
-                    <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+
+
+            <>
+            <div class="bg-gray-400 py-12 w-full flex flex-col items-center border-t-2 border-black">
+            <h2 class="font-bold text-xl text-gray-400">Log in to book your room</h2>
+            
+            <form class="max-w-xl w-full text-gray-200 mt-4 px-8 md:px-0" onSubmit={this.onSubmit}>
+                <div class="flex flex-col md:flex-row  md:-mx-2">
+                    <label htmlFor="email" class="sr-only">Email address</label>
+                    <input class="bg-gray-700 mt-4 border border-gray-600 rounded-lg py-2 px-4 w-full md:mx-2" type="email" placeholder="Email Address" id="email" onChange={this.onChange} value={this.state.email}/>
+                    
                 </div>
-                <form noValidate onSubmit={this.onSubmit}>
-                    <div>
-                        <input onChange={this.onChange} value={this.state.email} error={errors.email} id="email" type="email"
-                            className={classnames("", { invalid: errors.email || errors.emailnotfound })}
-                        />
-                        <label htmlFor="email">Email</label>
-                        <span>{errors.email}{errors.emailnotfound}</span>
-                    </div>
-                    <div>
-                        <input onChange={this.onChange} value={this.state.password} error={errors.password} id="password" type="password" className={classnames("",{ invalid: errors.password || errors.passwordincorrect })} />
-                        <label htmlFor="password">Password</label>
-                        <span>{errors.password}{errors.passwordincorrect}</span>
-                    </div>
-                    <div>
-                        <button type="submit">Login</button>
-                    </div>
-                </form>
-            </div>
+                <div class="flex flex-col md:flex-row  md:-mx-2">
+                    <label htmlFor="password" class="sr-only">Password</label>
+                    <input class="bg-gray-700 mt-4 border border-gray-600 rounded-lg py-2 px-4 w-full md:mx-2" type="password" placeholder="Password" id="password" onChange={this.onChange} value={this.state.password}/>
+                    
+                </div>
+                <div class="flex flex-col md:flex-row md:-mx-2">
+                    <button class="bg-blue-600 text-sm mt-4 rounded-lg py-2 px-4 w-full md:mx-2" type="submit">Log In Account</button>
+                </div>
+            </form>
+        </div>
+        </>
+
         );
     }
 }

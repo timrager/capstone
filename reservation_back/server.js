@@ -2,6 +2,7 @@
 // SET UP EXPRESS - DEPENDENCIES //
 ///////////////////////////////////
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport')
@@ -15,6 +16,7 @@ const PORT = process.env.PORT || 3000;
 ////////////////
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 app.use(express.json());
@@ -26,6 +28,8 @@ require('./config/passport')(passport);
 // MONGOOSE SETUP //
 ////////////////////
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/reservation';
+
+mongoose.set('useFindAndModify', false);
 
 // Connect to Mongo
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true});

@@ -4,7 +4,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const User = require('../../models/User');
-const Room = require('../../models/Room');
 const validateSignupInput = require('../../validation/signup');
 const validateLoginInput = require('../../validation/login');
 
@@ -25,7 +24,10 @@ router.post('/signup', (req, res) => {
             const newUser = new User({
                 name: req.body.name,
                 email: req.body.email,
-                password: req.body.password
+                password: req.body.password,
+                roomId: '',
+                reserveStartDate: '',
+                reserveEndDate: ''
             });
 
             bcrypt.genSalt(10, (err, salt) => {
@@ -53,15 +55,21 @@ router.post('/login', (req, res) => {
     const password = req.body.password;
 
     User.findOne({ email }).then(user => {
+
         if(!user){
             return res.status(404).json({ emailnotfound: 'Email not found.'});
         }
 
         bcrypt.compare(password, user.password).then(isMatch => {
             if(isMatch){
+     
                 const payload = {
                     id: user.id,
-                    name: user.name
+                    email: user.email,
+                    name: user.name,
+                    roomId: user.roomId,
+                    reserveStartDate: user.reserveStartDate,
+                    reserveEndDate: user.reserveEndDate
                 };
 
                 jwt.sign(
@@ -84,7 +92,37 @@ router.post('/login', (req, res) => {
     });
 });
 
+router.put('/update', (req, res) => {
 
+    const email = { email: req.body.email };
+    const booking = { 
+
+        email: req.body.email,
+        roomId: req.body.roomId,
+        reserveStartDate: req.body.reserveStartDate,
+        reserveEndDate: req.body.reserveEndDate
+     };
+
+    User.findOneAndUpdate(email, booking, { returnOriginal: false }, (err, update) => {
+        if(err) {
+            console.log("Error")
+        } else {
+            console.log( "Updated" ); 
+            console.log(update)
+            res.json({ update });
+    }});
+})
+
+router.delete('/update', (req, res) => {
+
+    const email = { email: req.body.email };
+
+    User.findOneAndDelete(email, (err, update) => {
+        if(err) {
+            console.log("Error")
+        } else res.redirect("/")
+    });
+})
 
 
 

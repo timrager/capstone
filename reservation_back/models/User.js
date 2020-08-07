@@ -11,6 +11,8 @@ const userSchema = new Schema({
     zip: String, 
     phone: String,
     roomId: String,
+    reserveStartDate: String,
+    reserveEndDate: String
 });
 
 const User = mongoose.model('User', userSchema);
